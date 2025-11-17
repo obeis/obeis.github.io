@@ -1,0 +1,31 @@
+{
+	"version": 3,
+	"file": "main.css",
+	"sourceRoot": "/home/obei/git/obei.io",
+	"sources": [
+		"assets/sass/main.scss",
+		"assets/sass/abstrcats/_mixins.scss",
+		"assets/sass/abstrcats/_variables.scss",
+		"assets/sass/base/_base.scss",
+		"assets/sass/layout/_404.scss",
+		"assets/sass/layout/_blog.scss",
+		"assets/sass/layout/_footer.scss",
+		"assets/sass/layout/_header.scss",
+		"assets/sass/layout/_main.scss",
+		"assets/sass/utilities/_utilities.scss"
+	],
+	"sourcesContent": [
+		"@import 'abstrcats/mixins';\n@import 'abstrcats/variables';\n\n@import 'base/base';\n\n@import 'layout/404';\n@import 'layout/blog';\n@import 'layout/footer';\n@import 'layout/header';\n@import 'layout/main';\n\n@import 'utilities/utilities';\n",
+		"// MEDIA QUERY MANAGER\n/*\n\tBreak Point:\n\tbp1: 600px / 16 = 37.5em\n\tbp2: 960px / 16 = 60em\n*/\n\n@mixin respond($breakpoint) {\n\t@if $breakpoint == bp1 {\n\t\t@media (max-width: 37.5em) { @content }\n\t}\n\n\t@if $breakpoint == bp2 {\n\t\t@media (max-width: 60em) { @content }\n\t}\n}\n",
+		"// COLOR\n$color-gray-0: rgba(0, 0, 0, 0.3);\n",
+		"* {\n\tmargin: 0;\n\tpadding: 0;\n\tbox-sizing: border-box;\n}\n\nhtml {\n/*\n\t\t(X / 16px) * 100% = Y (16 px is default font size)\n\t\t(10 px / 16 px) * 100% = 62.5%\n\t\t1rem = 10 px = X\n*/\n\tfont-size: 62.5%;\n\n\tline-height: 1.5;\n\tfont-family: \"Roboto\", sans-serif;\n\tfont-weight: normal;\n\n\theight: 100%;\n}\n\nbody {\n\tmargin-left: 25rem;\n\tmargin-right: 25rem;\n\theight: 100%;\n\n\t@include respond(bp1) {\n\t\tmargin-left: 1rem;\n\t\tmargin-right: 1rem;\n\t}\n}\n",
+		".404 {\n\tdisplay: flex;\n\tjustify-content: center;\n\tmargin-top: 10rem;\n}\n",
+		".blog {\n\tmargin: 3rem 1rem;\n\tcolor: $color-gray-0;\n\n\t& h1 {\n\t\tmargin: 3rem 0rem;\n\t}\n}\n\n.blog-list {\n\tdisplay: flex;\n\tflex-direction: column;\n}\n\n.blog-line {\n\tdisplay: flex;\n\tfont-size: 1.7rem;\n\tmargin-bottom: 0.75rem;\n\n\t& li {\n\t\tflex: 4;\n\n\t\t& a:hover {\n\t\t\tborder-bottom: 1px solid black;\n\t\t}\n\t}\n\n\t& time {\n\t\tflex: 1;\n\t}\n}\n",
+		".footer {\n\tfont-size: 1.4rem;\n\tpadding: 2rem;\n\n\tdisplay: flex;\n\tjustify-content: center;\n}\n",
+		".header {\n\tpadding: 3rem 5rem;\n\tfont-size: 1.7rem;\n\tborder-bottom: 1px solid black;\n\n\t& nav {\n\t\tdisplay: flex;\n\t}\n\n\t&__logo {\n\t\tflex: 1;\n\n\t\t& a:hover {\n\t\t\tborder-bottom: 1px solid black;\n\t\t}\n\t}\n\n\t& ul {\n\t\tdisplay: flex;\n\n\t\t& li {\n\t\t\tpadding-left: 2rem;\n\n\t\t\t& a:hover {\n\t\t\t\tborder-bottom: 1px solid black;\n\t\t\t}\n\t\t}\n\t}\n}\n",
+		"main {\n\tmin-height: 80%;\n}\n\n.info {\n\tmargin-top: 5rem;\n\tmargin-left: 15rem;\n\tmargin-right: 15rem;\n\tmargin-bottom: 3rem;\n\tfont-size: 1.6rem;\n\ttext-align: center;\n\n\t@include respond(bp1) {\n\t\tmargin-left: 1rem;\n\t\tmargin-right: 1rem;\n\t\tfont-size: 1.2rem;\n\t}\n}\n\n.photo {\n\t& img {\n\t\theight: 30rem;\n\t\tborder: 1px solid black;\n\t\tborder-radius: 10%;\n\t\tdisplay: flex;\n\t\tmargin: auto;\n\t}\n}\n\n.social {\n\tdisplay: flex;\n\tjustify-content: center;\n\n\tmargin-top: 2.5rem;\n\tmargin-bottom: 2.5rem;\n\tmargin-left: 2.5rem;\n\tmargin-right: 2.5rem;\n}\n\n.social-icon {\n\t& img {\n\t\theight: 3.5rem;\n\t\tpadding-right: 0.4rem;\n\t\tpadding-left: 0.4rem;\n\t}\n}\n",
+		".rst a {\n\ttext-decoration: none;\n\tcolor: black;\n}\n\n.rst a:focus {\n\toutline: none;\n}\n\n.rst ul {\n\tlist-style: none;\n}\n"
+	],
+	"names": [],
+	"mappings": "AGAA,AAAA,CAAC,AAAC,CACD,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CACV,UAAU,CAAE,UAAU,CACtB,AAED,AAAA,IAAI,AAAC,CAMJ,SAAS,CAAE,KAAK,CAEhB,WAAW,CAAE,GAAG,CAChB,WAAW,CAAE,oBAAoB,CACjC,WAAW,CAAE,MAAM,CAEnB,MAAM,CAAE,IAAI,CACZ,AAED,AAAA,IAAI,AAAC,CACJ,WAAW,CAAE,KAAK,CAClB,YAAY,CAAE,KAAK,CACnB,MAAM,CAAE,IAAI,CAMZ,AFrBC,MAAM,oBEYR,CAAA,AAAA,IAAI,AAAC,CAMH,WAAW,CAAE,IAAI,CACjB,YAAY,CAAE,IAAI,CAEnB,CAAA,AC9BD,AAAA,IAAI,AAAC,CACJ,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CACvB,UAAU,CAAE,KAAK,CACjB,ACJD,AAAA,KAAK,AAAC,CACL,MAAM,CAAE,SAAS,CACjB,KAAK,CHDS,eAAkB,CGMhC,AAPD,AAIC,KAJI,CAIF,EAAE,AAAC,CACJ,MAAM,CAAE,SAAS,CACjB,AAGF,AAAA,UAAU,AAAC,CACV,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,AAED,AAAA,UAAU,AAAC,CACV,OAAO,CAAE,IAAI,CACb,SAAS,CAAE,MAAM,CACjB,aAAa,CAAE,OAAO,CAatB,AAhBD,AAKC,UALS,CAKP,EAAE,AAAC,CACJ,IAAI,CAAE,CAAC,CAKP,AAXF,AAQE,UARQ,CAKP,EAAE,CAGD,CAAC,CAAC,KAAK,AAAC,CACT,aAAa,CAAE,eAAe,CAC9B,AAVH,AAaC,UAbS,CAaP,IAAI,AAAC,CACN,IAAI,CAAE,CAAC,CACP,AC7BF,AAAA,OAAO,AAAC,CACP,SAAS,CAAE,MAAM,CACjB,OAAO,CAAE,IAAI,CAEb,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CACvB,ACND,AAAA,OAAO,AAAC,CACP,OAAO,CAAE,SAAS,CAClB,SAAS,CAAE,MAAM,CACjB,aAAa,CAAE,eAAe,CAyB9B,AA5BD,AAKC,OALM,CAKJ,GAAG,AAAC,CACL,OAAO,CAAE,IAAI,CACb,AAPF,AASC,aATM,AASE,CACP,IAAI,CAAE,CAAC,CAKP,AAfF,AAYE,aAZK,CAYH,CAAC,CAAC,KAAK,AAAC,CACT,aAAa,CAAE,eAAe,CAC9B,AAdH,AAiBC,OAjBM,CAiBJ,EAAE,AAAC,CACJ,OAAO,CAAE,IAAI,CASb,AA3BF,AAoBE,OApBK,CAiBJ,EAAE,CAGD,EAAE,AAAC,CACJ,YAAY,CAAE,IAAI,CAKlB,AA1BH,AAuBG,OAvBI,CAiBJ,EAAE,CAGD,EAAE,CAGD,CAAC,CAAC,KAAK,AAAC,CACT,aAAa,CAAE,eAAe,CAC9B,ACzBJ,AAAA,IAAI,AAAC,CACJ,UAAU,CAAE,GAAG,CACf,AAED,AAAA,KAAK,AAAC,CACL,UAAU,CAAE,IAAI,CAChB,WAAW,CAAE,KAAK,CAClB,YAAY,CAAE,KAAK,CACnB,aAAa,CAAE,IAAI,CACnB,SAAS,CAAE,MAAM,CACjB,UAAU,CAAE,MAAM,CAOlB,APRC,MAAM,oBOLR,CAAA,AAAA,KAAK,AAAC,CASJ,WAAW,CAAE,IAAI,CACjB,YAAY,CAAE,IAAI,CAClB,SAAS,CAAE,MAAM,CAElB,CAAA,AAED,AACC,MADK,CACH,GAAG,AAAC,CACL,MAAM,CAAE,KAAK,CACb,MAAM,CAAE,eAAe,CACvB,aAAa,CAAE,GAAG,CAClB,OAAO,CAAE,IAAI,CACb,MAAM,CAAE,IAAI,CACZ,AAGF,AAAA,OAAO,AAAC,CACP,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CAEvB,UAAU,CAAE,MAAM,CAClB,aAAa,CAAE,MAAM,CACrB,WAAW,CAAE,MAAM,CACnB,YAAY,CAAE,MAAM,CACpB,AAED,AACC,YADW,CACT,GAAG,AAAC,CACL,MAAM,CAAE,MAAM,CACd,aAAa,CAAE,MAAM,CACrB,YAAY,CAAE,MAAM,CACpB,AC5CF,AAAA,IAAI,CAAC,CAAC,AAAC,CACN,eAAe,CAAE,IAAI,CACrB,KAAK,CAAE,KAAK,CACZ,AAED,AAAA,IAAI,CAAC,CAAC,CAAC,KAAK,AAAC,CACZ,OAAO,CAAE,IAAI,CACb,AAED,AAAA,IAAI,CAAC,EAAE,AAAC,CACP,UAAU,CAAE,IAAI,CAChB"
+}
